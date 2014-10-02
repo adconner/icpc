@@ -5,21 +5,22 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{minted}
 
-\newcommand{\abs}[1]{\lvert #1 \rvert}
-\newcommand{\norm}[1]{\lVert #1 \rVert}
-
-\renewcommand{\bar}[1]{\overline{#1}}
-\renewcommand{\iff}{\Leftrightarrow}
-\renewcommand{\implies}{\Rightarrow}
-
 \newcommand{\code}[1]{
 \inputminted[mathescape,
                %linenos,
                %numbersep=5pt,
-               frame=lines,
-               framesep=2mm]{cpp}{#1}}
-
+               %frame=lines,
+               %framesep=2mm
+               ]{cpp}{#1}}
 
 \begin{document}
-\code{dinic.cpp}
+\tableofcontents
+\section{Combinatorial optimization}
+\subsection{Sparse max-flow} \code{dinic.cpp}
+\subsection{Min cost max-flow} \code{mincostmaxflow.cpp}
+\subsection{Push relable max-flow} \code{pushrelable.cpp}
+\subsection{Max bipartite matching} \code{maxmatching.cpp}
+\subsection{Min cost max bipartite matching} \code{mincostmatching.cpp}
+\subsection{Min cut} \code{mincut.cpp}
+\subsection{Graph cut inference} \code{graphcutinference.cpp}
 \end{document}
