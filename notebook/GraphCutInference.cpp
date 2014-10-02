@@ -5,16 +5,17 @@
 //
 //    such that   $\phi_{ij}(0,0)+\phi_{ij}(1,1)\le\phi_{ij}(0,1)+\phi_{ij}(1,0)$  (*)
 //
-//    minimize    $\sum_i\psi_i(x_i)+\sum_{i<j}\phi_{ij}(x[i], x[j])$
+//    minimize    $\sum_i\psi_i(x_i)+\sum_{i<j}\phi_{ij}(x_i, x_j)$
 //
-//    with        $x[1]\cdots\,x[n]\in\{0,1\}$
+//    with        $x_1\cdots\,x_n\in\{0,1\}$
 //
 // This can also be used to solve maximization problems where the
 // direction of the inequality in (*) is reversed.
 //
 // INPUT: phi -- a matrix such that phi[i][j][u][v] = $\phi_{ij}(u, v)$
 //        psi -- a matrix such that psi[i][u] = $\psi_i(u)$
-//        x -- a vector where the optimal solution will be stored
+//        x -- a vector such that x[i]=$x_i$ 
+//              where the optimal solution will be stored
 //
 // OUTPUT: value of the optimal solution
 //

@@ -5,6 +5,8 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{minted}
 
+\DeclareMathOperator{\lcm}{lcm}
+
 \newcommand{\code}[1]{
 \inputminted[mathescape,
                %linenos,
@@ -12,17 +14,53 @@
                %frame=lines,
                %framesep=2mm
                ]{cpp}{#1}}
+\newcommand{\codej}[1]{
+\inputminted[mathescape,
+               %linenos,
+               %numbersep=5pt,
+               %frame=lines,
+               %framesep=2mm
+               ]{java}{#1}}
 
 \begin{document}
 \tableofcontents
 \section{Combinatorial optimization}
-\subsection{Sparse max-flow} \code{dinic.cpp}
-\subsection{Min cost max-flow} \code{mincostmaxflow.cpp}
-\subsection{Push relable max-flow} \code{pushrelable.cpp}
-\subsection{Max bipartite matching} \code{maxmatching.cpp}
-\subsection{Min cost max bipartite matching} \code{mincostmatching.cpp}
-\subsection{Min cut} \code{mincut.cpp}
-\subsection{Graph cut inference} \code{graphcutinference.cpp}
+\subsection{Sparse max-flow} \code{Dinic.cpp}
+\subsection{Min cost max-flow} \code{MinCostMaxFlow.cpp}
+\subsection{Push relable max-flow} \code{PushRelable.cpp}
+\subsection{Max bipartite matching} \code{MaxMatching.cpp}
+\subsection{Min cost max bipartite matching} \code{MinCostMatching.cpp}
+\subsection{Min cut} \code{MinCut.cpp}
+\subsection{Graph cut inference} \code{GraphCutInference.cpp}
+\section{Geometry}
+\subsection{Convex hull} \code{ConvexHull.cpp}
+\subsection{Miscellaneous geometry} \code{Geometry.cpp}
+\subsection{Java geometry} \codej{JavaGeometry.java}
+\subsection{Java 3D geometry} \codej{Geom3D.java}
+\subsection{Delaunay triangulation} \code{Delaunay.cpp}
+\section{Numerical/Number theoretic}
+\subsection{Basic number theoretic algorithms} \code{Euclid.cpp}
+\subsection{Prime testing/generation} \code{Primes.cpp}
+\subsection{Systems of linear equations, matrix inverse, determinant} \code{GaussJordan.cpp}
+\subsection{Reduced row echelon form, matrix rank} \code{RREF.cpp}
+\subsection{Fast fourier transform and convolution} \code{FFT.cpp}
+\subsection{Simplex algorithm for linear programming} \code{Simplex.cpp}
+\section{Graph algorithms}
+\subsection{Dijkstra's algorithm} \code{Dijkstra.cpp}
+\subsection{Strongly connected components} \code{SCC.cpp}
+\subsection{Eulerian path} \code{EulerianPath.cpp}
+\section{Data structures}
+\subsection{Suffix array} \code{SuffixArray.cpp}
+\subsection{Binary index tree (Fenwick tree)} \code{BIT.cpp}
+\subsection{Union-Find set} \code{UnionFind.cpp}
+\subsection{KD-tree} \code{KDTree.cpp}
+\subsection{Lazy segment tree (Java)} \codej{SegmentTreeRangeUpdate.java}
+\subsection{Lowest common ancester} \code{LCA.cpp}
 \section{Misc}
-\subsection{t.cpp} \code{t.cpp}
+\subsection{Longest increasing subsequence} \code{LCA.cpp}
+\subsection{Dates} \code{Dates.cpp}
+\subsection{Java regular expressions} \codej{LogLan.java}
+\subsection{C++ input/output} \code{IO.cpp}
+\subsection{Knuth-Morris-Pratt algorithm for substring matching} \code{KMP.cpp}
+\subsection{Latitude/longitude} \code{LatLong.cpp}
 \end{document}
