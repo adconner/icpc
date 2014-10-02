@@ -1,4 +1,6 @@
 #include<memory.h>
+#define MAXE 1000
+#define MAXV 1000
 struct edge{int e, nxt;};
 int V, E;
 edge e[MAXE], er[MAXE];

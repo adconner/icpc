@@ -5,7 +5,7 @@
 //
 // Running time, $O(|V|^2)$ cost per augmentation
 //     max flow:           $O(|V|^3)$ augmentations
-//     min cost max flow:  $O(|V|^4c)$ augmentations, where $c$ is the max edge cost
+//     min cost max flow:  $O(c|V|^4)$ augmentations, where $c$ is the max edge cost
 //     
 // INPUT: 
 //     - graph, constructed using AddEdge()
@@ -18,6 +18,7 @@
 
 #include <cmath>
 #include <vector>
+#include <limits>
 #include <iostream>
 
 using namespace std;

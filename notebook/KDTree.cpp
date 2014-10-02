@@ -13,6 +13,7 @@
 #include <vector>
 #include <limits>
 #include <cstdlib>
+#include <algorithm>
 
 using namespace std;
 
