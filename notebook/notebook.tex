@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{fixltx2e,microtype,nag}
+\usepackage{booktabs}
+\usepackage[margin=1in]{geometry}
+\usepackage{minted}
+
+\newcommand{\abs}[1]{\lvert #1 \rvert}
+\newcommand{\norm}[1]{\lVert #1 \rVert}
+
+\renewcommand{\bar}[1]{\overline{#1}}
+\renewcommand{\iff}{\Leftrightarrow}
+\renewcommand{\implies}{\Rightarrow}
+
+\newcommand{\code}[1]{
+\inputminted[mathescape,
+               %linenos,
+               %numbersep=5pt,
+               frame=lines,
+               framesep=2mm]{cpp}{#1}}
+
+
+\begin{document}
+\code{dinic.cpp}
+\end{document}
