@@ -1,11 +1,8 @@
-set nocompatible
+set nocp
 
 imap jj <Esc>
 
-filetype plugin indent on
-syntax on
-
-set sw=2 sts=2 et ws ic sc is hls wrap hid so=3
+set sw=2 sts=2 et ws ic sc is hls wrap hid so=3 gd
 
 colorscheme delek
 
@@ -14,6 +11,13 @@ nmap Y y$
 map <c-j> <c-e>
 map <c-k> <c-y>
 map -<space> :noh<cr>
+map -i :e %<.in<cr>
 
-au BufEnter *.java map -c :up<cr>:make %<.class && java %< < %<.in<cr>
-au BufEnter *.cpp map -c :up<cr>:make %< && ./%< < %<.in<cr>
+map -c :up<cr>:make<cr>
+
+au BufEnter *.cpp set mp=make\ %< | map -h :!./%< < %<.in<cr>
+au BufEnter *.java set mp=make\ %<.class | map -h :!java %< < %<.in<cr>
+
+filetype plugin indent on
+syntax on
+
